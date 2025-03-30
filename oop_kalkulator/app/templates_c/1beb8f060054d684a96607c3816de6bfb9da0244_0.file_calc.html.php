@@ -74,34 +74,20 @@ $_smarty_current_dir = 'C:\\xampp\\htdocs\\php_paw_4sem\\szablony_smarty\\app';
                         <div class="col-12 col-12-mobilep">
                             <label for="lending_rate">Oprocentowanie</label>
                             <select name="lending_rate" id="lending_rate">
-                                <option value="0.01" {
-                                    if (isset($lending_rate) && $lending_rate == 0.01) print("selected");
-                                    }>
+                                <option value="0.01" >
                                     1%
                                 </option>
-                                <option value="0.02" {
-                                    if (isset($lending_rate) && $lending_rate == 0.02) print("selected");
-                                    } >2%
+                                <option value="0.02" >2%
                                 </option>
-                                <option value="0.03" {
-                                    if (isset($lending_rate) && $lending_rate == 0.03) print("selected");
-                                    } >3%
+                                <option value="0.03">3%
                                 </option>
-                                <option value="0.04" {
-                                    if (isset($lending_rate) && $lending_rate == 0.04) print("selected");
-                                    }>4%
+                                <option value="0.04">4%
                                 </option>
-                                <option value="0.05" {
-                                    if (isset($lending_rate) && $lending_rate == 0.05) print("selected");
-                                    } >5%
+                                <option value="0.05">5%
                                 </option>
-                                <option value="0.06" {
-                                    if (isset($lending_rate) && $lending_rate == 0.06) print("selected");
-                                    } >6%
+                                <option value="0.06">6%
                                 </option>
-                                <option value="0.07" {
-                                    if (isset($lending_rate) && $lending_rate == 0.07) print("selected");
-                                    }>7%
+                                <option value="0.07">7%
                                 </option>
                             </select>
                         </div>

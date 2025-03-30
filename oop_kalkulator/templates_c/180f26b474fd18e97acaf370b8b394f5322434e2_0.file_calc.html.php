@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.2, created on 2025-03-25 08:15:55
+/* Smarty version 5.4.2, created on 2025-03-22 15:36:07
   from 'file:C:\xampp\htdocs\php_paw_4sem\szablony_smarty/app/calc.html' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.2',
-  'unifunc' => 'content_67e2582b869ee2_78847029',
+  'unifunc' => 'content_67decad7b74f54_26828948',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '1beb8f060054d684a96607c3816de6bfb9da0244' => 
+    '180f26b474fd18e97acaf370b8b394f5322434e2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\php_paw_4sem\\szablony_smarty/app/calc.html',
-      1 => 1742886953,
+      1 => 1742654160,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_67e2582b869ee2_78847029 (\Smarty\Template $_smarty_tpl) {
+function content_67decad7b74f54_26828948 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\xampp\\htdocs\\php_paw_4sem\\szablony_smarty\\app';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_182886431967e2582b844d59_94180862', 'footer');
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_171809553467decad796f2d6_47639930', 'footer');
 ?>
 
 
 <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_80022072067e2582b84e8f0_06968425', 'content');
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_95101664767decad7976b04_98854309', 'content');
 $_smarty_tpl->getInheritance()->endChild($_smarty_tpl, "../templates/main.html", $_smarty_current_dir);
 }
 /* {block 'footer'} */
-class Block_182886431967e2582b844d59_94180862 extends \Smarty\Runtime\Block
+class Block_171809553467decad796f2d6_47639930 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\xampp\\htdocs\\php_paw_4sem\\szablony_smarty\\app';
 ?>
-Coś<?php
+przykładowa tresć stopki wpisana do szablonu głównego z szablonu kalkulatora<?php
 }
 }
 /* {/block 'footer'} */
 /* {block 'content'} */
-class Block_80022072067e2582b84e8f0_06968425 extends \Smarty\Runtime\Block
+class Block_95101664767decad7976b04_98854309 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\xampp\\htdocs\\php_paw_4sem\\szablony_smarty\\app';
