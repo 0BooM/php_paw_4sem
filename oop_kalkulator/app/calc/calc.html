@@ -1,4 +1,4 @@
-{extends file="../templates/main.html"}
+{extends file=$conf->root_path|cat:"/templates/main.html"}
 
 {block name=footer}Coś{/block}
 
@@ -6,7 +6,7 @@
             <section class="col-6 col-12-narrower">
                 <h3>Kalkulator</h3>
 
-                <form action="{$conf->app_url}/app/calc_cred.php" method="post">
+                <form action="{$conf->action_root}calcCompute" method="post">
 
                     <div class="row gtr-50">
                         <div class="col-12 col-12-mobilep">

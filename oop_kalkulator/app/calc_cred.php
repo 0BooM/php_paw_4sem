@@ -1,7 +1,19 @@
 <?php
 require_once dirname(__FILE__).'/../config.php';
 
-require_once $conf->root_path.'/app/CalcCtrl.class.php';
+$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 
-$ctrl = new CalcCtrl();
-$ctrl->process();
+switch ($action) {
+    default:
+        include_once $conf->root_path.'/app/calc/CalcCtrl.class.php';
+        $ctrl = new CalcCtrl();
+        $ctrl->generateView();
+        break;
+    case 'calcCompute':
+        include_once $conf->root_path.'/app/calc/CalcCtrl.class.php';
+        $ctrl = new CalcCtrl();
+        $ctrl->process();
+        break;
+    case 'action1':
+        break;
+}
