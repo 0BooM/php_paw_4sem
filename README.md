@@ -2,3 +2,5 @@
 
 ### php_01_widok_kontroler - Zadanie 1
 ### kalkulator_kredytowy - Zadanie 2
+### szablony - Zadanie 3
+### oop_kalkulator - Zadanie 4
