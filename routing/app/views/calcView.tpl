@@ -3,6 +3,12 @@
 {block name=footer}Przykładowa stopka{/block}
 
 {block name=content}
+    <div class="pure-menu pure-menu-horizontal bottom-margin">
+        <a href="{$conf->action_url}logout"  class="pure-menu-heading pure-menu-link">wyloguj</a>
+        <span style="float:right;">użytkownik: {$user->login}, rola: {$user->role}</span>
+    </div>
+
+    
             <section class="col-6 col-12-narrower">
                 <h3>Kalkulator</h3>
 
@@ -47,27 +53,7 @@
 
                 <div class="messages">
 
-{if $msgs->isError()}
-        <h4>Wystąpiły błędy:</h4>
-            <ol class="err">
-                {foreach $msgs->getErrors() as $err}
-                    {strip}
-                        <li>{$err}</li>
-                    {/strip}
-                {/foreach}
-            </ol>
-{/if}
-
-{if $msgs->isInfo()}
-        <h4>Informacje:</h4>
-            <ol class="inf">
-                {foreach $msgs->getInfos() as $inf}
-                    {strip}
-                        <li>{$inf}</li>
-                    {/strip}
-                {/foreach}
-            </ol> 
-{/if}
+{include file='messages.tpl'}
 
 {if isset($res->result)}
     <h4>Wynik:</h4>

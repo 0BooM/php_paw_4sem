@@ -2,7 +2,7 @@
 
 $conf->server_name = 'localhost';
 $conf->server_url = 'http://'.$conf->server_name;
-$conf->app_root = '/php_paw_4sem/namespaces';
+$conf->app_root = '/php_paw_4sem/routing';
 $conf->action_root = $conf->app_root.'/ctrl.php?action=';
 
 

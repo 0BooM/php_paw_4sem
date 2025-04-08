@@ -23,7 +23,7 @@ class CalcCtrl{
         if (! (isset($this->form->amount) && isset($this->form->length) && isset($this->form->lending_rate))){
             return false;
         }
-        $infos [] = 'Przekazano parametry.';
+       // $infos [] = 'Przekazano parametry.';
 
         if($this->form->amount == ""){
             getMessages()->addError("Nie podałeś wartości pola ,,Kwota\"");
@@ -45,7 +45,7 @@ class CalcCtrl{
     }
 
 
-    public function process(){
+    public function action_calcCompute(){
         $this->getParams();
         
         if($this->validate()){
@@ -55,16 +55,28 @@ class CalcCtrl{
 
             getMessages()->addInfo("Parametry poprawne.");
 
-        $this->result->result = round(($this->form->amount + ($this->form->amount * $this->form->lending_rate * $this->form->length)) / ($this->form->length * 12), 2);
+            if (inRole('admin')) {
+						$this->result->result = round(($this->form->amount + ($this->form->amount * $this->form->lending_rate * $this->form->length)) / ($this->form->length * 12), 2);
+					} else {
+						getMessages()->addError('Tylko administrator może wykonać tę operację');
+					}
 
         getMessages()->addInfo('Wykonano obliczenia.');
         }
+
+        $this->generateView();
+    }
+
+    public function action_calcShow(){
+        getMessages()->addInfo("Witaj w kalkulatorze kredytowym");
         $this->generateView();
     }
 
     public function generateView(){
-        
+        getSmarty()->assign('user', unserialize($_SESSION['user']));
+
         getSmarty()->assign('page_title', 'Kalkulator kredytowy');
+
         getSmarty()->assign('page_description', 'Oblicz ile wynosi twoja rata kredytowa');
 
        // getSmarty()->assign('msgs',$this->msgs);
