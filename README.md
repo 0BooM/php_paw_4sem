@@ -6,3 +6,4 @@
 ### oop_kalkulator - Zadanie 4
 ### namespaces - Zadanie 5
 ### routing - Zadanie 6
+### bd - Zadanie 7
